@@ -1,6 +1,4 @@
-// import {api} from "./constants";
-
-import {api} from "./constants";
+import {api} from "./constants.js";
 function createItem(data, key) {
     if (!data) {
         return false;
@@ -16,9 +14,9 @@ function createItem(data, key) {
             <div class = "item_img">
                 <img src = "${api + data[key]?.picture?.path}" alt = "${data[key]?.picture?.alt}">
             </div>
-            <div class="item_desc">
-                <div class="item_name">${data[key]?.name}</div>
-                <div class="item_price">${data[key]?.price.value + ' ' + data[key]?.price.currency}</div>
+            <div class = "item_desc">
+                <div class = "item_name">${data[key]?.name}</div>
+                <div class = "item_price">${data[key]?.price.value + ' ' + data[key]?.price.currency}</div>
             </div>
         </a>`;
 
@@ -49,6 +47,7 @@ export function detailCard(data) {
     firstDesc.innerHTML = `
                 <h2>${data.name}</h2>
                 <p>${data.info}</p>`;
+
     secondDesc.innerHTML = `
                 <h3>${data.description}</h3>
                 <p>${data.details}</p>`;

@@ -1,4 +1,4 @@
-import {api} from "./constants";
+import {api} from "./constants.js";
 
 async function getData() {
     const data = await fetch(api + '/item')
@@ -29,6 +29,6 @@ async function getItemInfo(id) {
     return itemId.content;
 }
 
-const id = window.location.search.replace( '?', '');
+export const id = window.location.search.replace( '?', '');
 
 export {getData, getItemInfo}
