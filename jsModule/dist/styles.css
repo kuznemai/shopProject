@@ -43,7 +43,7 @@ header{
 .cart{
     margin-right: 16px;
 }
-.header_menu >a:hover path{
+.header_menu > a:hover path{
     fill: #E97F03;
     transition: 0.3s;
 }
@@ -86,6 +86,9 @@ header{
     width: 100%;
     justify-content: end;
     margin: 8px 8px 0 0;
+}
+.active svg path{
+    fill: #E97F03;
 }
 .item_desc{
     display: flex;
