@@ -87,6 +87,9 @@ header{
     justify-content: end;
     margin: 8px 8px 0 0;
 }
+.active svg path{
+    fill: #E97F03;
+}
 .item_desc{
     display: flex;
     flex-direction: column;
