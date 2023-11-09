@@ -87,7 +87,19 @@ header{
     justify-content: end;
     margin: 8px 8px 0 0;
 }
-.active svg path{
+.item_icon > svg > path{
+    stroke: grey;
+    stroke-width: 2px;
+    fill: none;
+}
+.item_icon > svg > path:hover{
+    stroke: transparent;
+    stroke-width: 0px;
+    fill: #E97F03;
+}
+.active > svg > path{
+    stroke: transparent;
+    stroke-width: 0px;
     fill: #E97F03;
 }
 .item_desc{
