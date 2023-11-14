@@ -1,12 +1,13 @@
 import {api} from "./constants.js";
+import axios from 'axios';
 
 async function getData() {
-    const data = await fetch(api + '/item')
+    const data = await axios.get(api + '/item')
         .then( (response) => {
-            if (!response.ok) {
+            if (response.status !== 200) {
                 throw new Error('network error')
             } else {
-                return response.json();
+                return response.data;
             }
         })
         .catch(function (err) {
@@ -15,12 +16,12 @@ async function getData() {
     return data.content;
 }
 async function getItemInfo(id) {
-    const itemId = await fetch(api + '/item/:' + id)
+    const itemId = await axios.get(api + '/item/:' + id)
         .then( (response) => {
-            if (!response.ok) {
+            if (response.status !== 200 ) {
                 throw new Error( 'error')
             } else {
-                return response.json();
+                return response.data;
             }
         })
         .catch(function (err) {
