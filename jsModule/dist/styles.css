@@ -47,6 +47,7 @@ header{
     fill: #E97F03;
     transition: 0.3s;
 }
+
 .wrapper{
     display: flex;
     flex-wrap: wrap;
@@ -125,6 +126,36 @@ header{
     justify-content: center;
     align-items: center;
 }
+.hl{
+    background: #E97F03;
+}
+.options{
+    position: absolute;
+    top:50px;
+    margin: 10px;
+    padding: 10px;
+    list-style-type: none;
+    background: white;
+    z-index: 9;
+    transition: 0.3s;
+}
+.options > li{
+    padding:8px;
+}
+.options > li >a{
+    text-decoration: none;
+    color: #545454;
+    padding:8px;
+}
+.options > li >a:hover{
+    background-color: #f2f2f2;
+    box-shadow: 3px 3px 6px 0 rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.hide {
+    display: none;
+}
+
 @media screen and (max-width: 375px) {
     .wrapper{
      padding:24px 0;
